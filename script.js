@@ -1,8 +1,4 @@
-function submit() {
-    document.getElementById('content').innerHTML = '';
-    var val = document.getElementById('search').value;
-    var newElement = document.createElement('script');
-    newElement.src = token+`${val}`+token_end;;
-    newElement.id="mainscript";
-    document.body.appendChild(newElement);
-};
+console.log("hello world")
+fetch("http://localhost:5555/key")
+.then(res => res.json())
+.then(data => console.log(data))
