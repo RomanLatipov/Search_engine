@@ -5,16 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="./dist/script.js" defer></script>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <input id="search" type="text" placeholder="search">
-    <button id="btn" onclick="submit()";>Search</button>
+    <div class="title" style="padding-top: 40px; color: white">
+        <a>Search Through <span class="gradient-text" style="font-weight: 900">Millions</span></a><br>
+        <a>Of Indexed Webpages!</a>
+    </div><br>
+    <div class="search-bar" style="margin: auto;">
+        <input type="text" id="search" placeholder="search">
+        <button id="myBtn" onclick="submit()";><img src="search.png"></button>
+    </div>
     <script>
-        const input = document.getElementById("search");
+        var input = document.getElementById("search");
         input.addEventListener("keypress", function(event) {
             if (event.key === "Enter") {
                 event.preventDefault();
-                document.getElementById("btn").click();
+                document.getElementById("myBtn").click();
             }
         });
     </script>
